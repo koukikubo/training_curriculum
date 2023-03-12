@@ -3,12 +3,9 @@ class CalendarsController < ApplicationController
   # １週間のカレンダーと予定が表示されるページ
   def index
     get_week
-    @plans = Plan.all
-  end
-  def new 
     @plan = Plan.new
   end
-
+  
   # 予定の保存
   def create
     Plan.create(plan_params)
